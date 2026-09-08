@@ -1,0 +1,11 @@
+# Material de referência e interno — não vai para o repositório público
+DS 01/
+DS 02/
+jcp-identidade-visual.pdf
+jcp-landing-unificada-copy.md
+
+# Arquivos temporários
+_probe*.html
+teste-*.html
+.DS_Store
+Thumbs.db
