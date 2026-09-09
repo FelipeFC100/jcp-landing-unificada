@@ -574,3 +574,162 @@ section[id]{scroll-margin-top:80px}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
 }
+
+/* ==========================================================================
+   22. CELULAR — so aqui. Nada abaixo muda o desktop.
+   Ideia: menos bloco empilhado, mais coisa lado a lado, e o botao do
+   WhatsApp vira bolinha no canto em vez de tapar a tela inteira.
+   ========================================================================== */
+@media(max-width:759px){
+
+  /* margem lateral menor: sobra largura de verdade pro conteudo */
+  .wrap{width:min(var(--wrap),100% - 1.9rem)}
+  .wrap--narrow{width:min(880px,100% - 1.9rem)}
+  section{padding-block:clamp(2.4rem,7.5vw,3.4rem)}
+  .sec-head{margin-bottom:1.35rem}
+
+  .btn{padding:.95rem 1.25rem;font-size:.8rem}
+  .btn svg{width:17px;height:17px}
+  .cta-foot{margin-top:1.35rem;gap:.75rem}
+
+  /* ---- 8. Heroi: foto do lado do titulo, texto embaixo em linha cheia ---- */
+  .hero{padding-block:1.5rem 0}
+  .hero-grid{
+    grid-template-columns:1fr clamp(118px,36%,168px);
+    column-gap:.9rem;row-gap:0;align-items:start;
+  }
+  .hero-copy{display:contents}
+  .hero .chapeu{
+    grid-area:1/1/2/-1;margin-bottom:.9rem;
+    font-size:.67rem;letter-spacing:.12em;
+  }
+  .hero .chapeu::before{width:18px}
+  .hero h1{
+    grid-area:2/1/3/2;align-self:center;
+    font-size:clamp(1.58rem,7.2vw,2.05rem);max-width:none;
+  }
+  .hero h1 .line2{font-size:.72em;margin-top:.4em;max-width:none}
+  .hero-figure{grid-area:2/2/3/3;align-self:start;max-width:none;margin:0}
+  .hero-figure .foto-slot{padding:.9rem .55rem;gap:.35rem}
+  .hero-figure .foto-slot b{font-size:.58rem;letter-spacing:.1em}
+  .hero-figure .foto-slot span{display:none}
+  .foto-slot--heroi{max-height:none}
+  .hero .lede{grid-area:3/1/4/-1;margin:1.15rem 0 .85rem;font-size:1rem}
+  .hero-sigilo{grid-area:4/1/5/-1;margin-bottom:1.15rem;font-size:.82rem}
+  .hero .btn-row{
+    grid-area:5/1/6/-1;display:grid;grid-template-columns:1fr;
+    gap:.6rem;padding-bottom:1.9rem;
+  }
+  .hero .btn-row .btn--ghost{padding:.78rem 1rem;font-size:.74rem}
+
+  .selos li{padding:.85rem .45rem;gap:.55rem;font-size:.79rem}
+  .selos li svg{width:17px;height:17px}
+
+  /* ---- 9. Video: legenda mais junta do player ---- */
+  .video-grid{gap:1.5rem}
+  .player{width:min(280px,72vw)}
+  .video-nota{font-size:.8rem;margin-top:.8rem;align-items:flex-start;text-align:left}
+  .video-nota svg{margin-top:.18rem}
+
+  /* ---- 10. Triador: dois cartoes por linha ---- */
+  .tri-grid{grid-template-columns:repeat(2,1fr);gap:.65rem}
+  .tri-card{padding:1rem .85rem;gap:.6rem}
+  .tri-ico{width:22px;height:22px}
+  .tri-box{width:22px;height:22px;border-radius:7px}
+  .tri-txt{font-size:.93rem;line-height:1.2}
+  .tri-result{margin-top:1.2rem;padding:1.15rem 1.15rem 1.25rem;gap:.9rem}
+  .tri-msg{flex:1 1 100%;font-size:.94rem}
+  .tri-result .btn{width:100%}
+
+  /* ---- 11. Areas ---- */
+  .areas{gap:.7rem}
+  .area-cab h3{font-size:1.06rem}
+  .area-frase{font-size:.92rem}
+  .area-ico{width:26px;height:26px}
+  .numeros{gap:.45rem;margin-top:.75rem}
+  .numeros b{padding:.42rem .8rem;font-size:1.05rem}
+  .numeros b span{font-size:.72rem}
+  .area-corpo{gap:1rem}
+  .checks li,.conta li{font-size:.95rem;padding-top:.6rem;padding-bottom:.6rem}
+  .callout{padding:1rem 1.1rem;gap:.8rem}
+  .callout p{font-size:.9rem}
+
+  /* ---- 13/14. Travas e passos ---- */
+  .travas{gap:.7rem}
+  .trava{padding:1.25rem 1.15rem}
+  .trava h3{font-size:1.05rem;margin-bottom:.65rem}
+  .trava p{font-size:.93rem;line-height:1.6}
+
+  .steps{grid-template-columns:repeat(2,1fr);gap:.65rem}
+  .step{padding:1.15rem 1rem 1.1rem}
+  .step::before{font-size:1.2rem;margin-bottom:.55rem}
+  .step h3{font-size:.98rem;line-height:1.2}
+  .step p{font-size:.85rem;line-height:1.5}
+
+  /* ---- 15. Onde a gente fica: os dois botoes na mesma linha ---- */
+  .onde{gap:1.4rem}
+  .endereco{padding:1.15rem 1.15rem;margin:1.15rem 0}
+  .endereco p{font-size:.96rem}
+  .onde .btn-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+  .onde .btn-row .btn{padding:.85rem .55rem;font-size:.71rem;letter-spacing:.02em;gap:.4rem}
+  .onde .btn-row .btn svg{width:15px;height:15px}
+  .onde-legenda{font-size:.86rem}
+
+  /* ---- 16. Recado e equipe: cada advogado vira uma linha com foto ---- */
+  .recado{gap:1.25rem}
+  .recado>figure .foto-slot{max-width:56%;margin-inline:0;aspect-ratio:4/5}
+  .carta{padding:1.3rem 1.2rem}
+  .carta p{font-size:.97rem;line-height:1.68;margin-bottom:.8rem}
+  .assinatura{margin-top:1.2rem;padding-top:1.1rem;gap:.75rem}
+  .assinatura .nome{font-size:1.8rem}
+
+  .equipe{grid-template-columns:1fr;gap:.65rem;margin-top:1.6rem}
+  .membro{
+    display:grid;grid-template-columns:82px 1fr;
+    column-gap:.95rem;padding:.85rem;
+  }
+  .membro .foto-slot{
+    grid-column:1;grid-row:1/span 3;align-self:start;
+    margin-bottom:0;padding:.5rem .35rem;aspect-ratio:3/4;max-height:none;
+  }
+  .membro .foto-slot b{font-size:.58rem}
+  .membro .foto-slot span{font-size:.72rem}
+  .membro h4{grid-column:2;grid-row:1;align-self:end;font-size:1rem}
+  .membro .oab{grid-column:2;grid-row:2;margin-bottom:.25rem;font-size:.7rem}
+  .membro p{grid-column:2;grid-row:3;align-self:start;font-size:.86rem;line-height:1.45}
+
+  /* ---- 17/18. FAQ e fechamento ---- */
+  .faq summary{padding:.95rem 1.1rem;font-size:.98rem;gap:.7rem}
+  .faq .answer{padding:0 1.1rem 1.1rem;font-size:.92rem}
+  .garantias{margin-top:1.5rem;gap:.5rem}
+  .garantias li{font-size:.9rem}
+  .final .aviso{margin-top:1.75rem}
+
+  /* ---- 19. Rodape: contato e endereco lado a lado ---- */
+  .site-footer{padding-block:2.5rem 2.75rem}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem 1.1rem}
+  .foot-brand{grid-column:1/-1}
+  .site-footer .foot-brand img{width:145px;margin-bottom:.7rem}
+  .footer-grid>div:last-child{grid-column:1/-1}
+  .site-footer p,.site-footer li{font-size:.83rem}
+  .foot-legal{margin-top:1.8rem;padding-top:1.2rem;gap:.7rem}
+
+  /* ---- 20. WhatsApp: bolinha no canto, sem barra tapando a tela ---- */
+  .wa-bar{
+    left:auto;right:1rem;
+    bottom:calc(1rem + env(safe-area-inset-bottom,0px));
+    width:56px;height:56px;padding:0;gap:0;
+    border-radius:50%;border:2px solid rgba(255,255,255,.4);
+    box-shadow:0 14px 28px -10px rgba(18,140,80,.8), 0 2px 8px rgba(0,0,0,.35);
+  }
+  .wa-bar__txt{display:none}
+  .wa-bar svg{width:29px;height:29px}
+}
+
+/* telas bem estreitas: o titulo do heroi nao pode quebrar feio */
+@media(max-width:359px){
+  .hero-grid{grid-template-columns:1fr 108px}
+  .hero h1{font-size:1.42rem}
+  .tri-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+}
