@@ -462,7 +462,8 @@ section[id]{scroll-margin-top:80px}
 .assinatura .cargo{font-size:.84rem;line-height:1.45;color:#7C879C}
 
 .equipe{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:clamp(2rem,4vw,3rem)}
-@media(min-width:640px){.equipe{grid-template-columns:repeat(3,1fr)}}
+/* duas advogadas: duas colunas, com teto pro cartao nao esticar demais */
+@media(min-width:640px){.equipe{grid-template-columns:repeat(2,1fr);max-width:760px}}
 .membro{
   padding:1.25rem;border-radius:var(--r-panel);
   background:var(--navy-800);border:1px solid var(--navy-600);
