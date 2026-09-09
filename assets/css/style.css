@@ -469,13 +469,19 @@ section[id]{scroll-margin-top:80px}
 .assinatura .cargo{font-size:.84rem;line-height:1.45;color:#7C879C}
 
 .equipe{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:clamp(2rem,4vw,3rem)}
-/* duas advogadas: duas colunas, com teto pro cartao nao esticar demais */
-@media(min-width:640px){.equipe{grid-template-columns:repeat(2,1fr);max-width:760px}}
+@media(min-width:640px){.equipe{grid-template-columns:repeat(2,1fr)}}
+/* cartao deitado: com duas advogadas, o empilhado deixava a foto pequena
+   no meio de um cartao largo demais */
 .membro{
+  display:flex;align-items:center;gap:1.25rem;
   padding:1.25rem;border-radius:var(--r-panel);
   background:var(--navy-800);border:1px solid var(--navy-600);
 }
-.membro .foto-slot{padding:1rem .75rem;margin-bottom:1rem;aspect-ratio:4/3;max-height:180px}
+.membro .foto-slot{
+  flex:none;width:130px;margin-bottom:0;
+  padding:.7rem .45rem;aspect-ratio:3/4;max-height:none;
+}
+.membro-txt{min-width:0}
 .membro h4{font-size:1.08rem;color:var(--paper);margin-bottom:.3rem}
 .membro .oab{
   display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;
@@ -692,19 +698,13 @@ section[id]{scroll-margin-top:80px}
   .assinatura .nome{font-size:1.8rem}
 
   .equipe{grid-template-columns:1fr;gap:.65rem;margin-top:1.6rem}
-  .membro{
-    display:grid;grid-template-columns:82px 1fr;
-    column-gap:.95rem;padding:.85rem;
-  }
-  .membro .foto-slot{
-    grid-column:1;grid-row:1/span 3;align-self:start;
-    margin-bottom:0;padding:.5rem .35rem;aspect-ratio:3/4;max-height:none;
-  }
+  .membro{gap:.95rem;padding:.85rem}
+  .membro .foto-slot{width:88px;padding:.5rem .35rem}
   .membro .foto-slot b{font-size:.58rem}
   .membro .foto-slot span{font-size:.72rem}
-  .membro h4{grid-column:2;grid-row:1;align-self:end;font-size:1rem}
-  .membro .oab{grid-column:2;grid-row:2;margin-bottom:.25rem;font-size:.7rem}
-  .membro p{grid-column:2;grid-row:3;align-self:start;font-size:.86rem;line-height:1.45}
+  .membro h4{font-size:1rem}
+  .membro .oab{margin-bottom:.25rem;font-size:.7rem}
+  .membro p{font-size:.86rem;line-height:1.45}
 
   /* ---- 17/18. FAQ e fechamento ---- */
   .faq summary{padding:.95rem 1.1rem;font-size:.98rem;gap:.7rem}
