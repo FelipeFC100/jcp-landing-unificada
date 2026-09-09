@@ -180,7 +180,7 @@ section[id]{scroll-margin-top:80px}
 /* ---------- 8. Heroi ---------- */
 .hero{
   background:
-    radial-gradient(120% 90% at 78% 18%, rgba(199,156,80,.16), transparent 58%),
+    radial-gradient(78% 62% at 74% 34%, rgba(199,156,80,.14), transparent 62%),
     linear-gradient(180deg,var(--navy-950) 0%,var(--navy-900) 46%,var(--navy-800) 100%);
   color:#C3CAD8;padding-block:clamp(2.75rem,5vw,4.5rem) 0;overflow:hidden;
 }
@@ -203,10 +203,10 @@ section[id]{scroll-margin-top:80px}
   filter:blur(6px);
 }
 .hero-figure picture{display:block}
+/* recorte com fundo transparente: nada de moldura, ele fica solto no fundo */
 .hero-figure img{
-  position:relative;width:100%;object-fit:cover;object-position:top center;
-  border-radius:20px;border:1px solid rgba(232,205,147,.22);
-  box-shadow:0 30px 60px -28px rgba(0,0,0,.9);
+  position:relative;width:100%;height:auto;
+  object-fit:contain;object-position:bottom center;
 }
 @media(min-width:900px){
   .hero-grid{grid-template-columns:1fr .88fr}
@@ -235,7 +235,6 @@ section[id]{scroll-margin-top:80px}
   letter-spacing:.16em;text-transform:uppercase;color:var(--gold-400);
 }
 .foto-slot span{font-size:.84rem;line-height:1.55;color:#8B96AB;max-width:30ch}
-.foto-slot--heroi{aspect-ratio:27/40;max-height:520px;margin-inline:auto;width:100%}
 .foto-slot--retrato{aspect-ratio:3/4}
 .foto-slot--larga{aspect-ratio:16/10}
 .foto-slot--claro{
@@ -618,7 +617,7 @@ section[id]{scroll-margin-top:80px}
   /* ---- 8. Heroi: foto do lado do titulo, texto embaixo em linha cheia ---- */
   .hero{padding-block:1.5rem 0}
   .hero-grid{
-    grid-template-columns:1fr clamp(118px,36%,168px);
+    grid-template-columns:1fr clamp(126px,40%,178px);
     column-gap:.9rem;row-gap:0;align-items:start;
   }
   .hero-copy{display:contents}
@@ -633,10 +632,6 @@ section[id]{scroll-margin-top:80px}
   }
   .hero h1 .line2{font-size:.72em;margin-top:.4em;max-width:none}
   .hero-figure{grid-area:2/2/3/3;align-self:start;max-width:none;margin:0}
-  .hero-figure .foto-slot{padding:.9rem .55rem;gap:.35rem}
-  .hero-figure .foto-slot b{font-size:.58rem;letter-spacing:.1em}
-  .hero-figure .foto-slot span{display:none}
-  .foto-slot--heroi{max-height:none}
   .hero .lede{grid-area:3/1/4/-1;margin:1.15rem 0 .85rem;font-size:1rem}
   .hero-sigilo{grid-area:4/1/5/-1;margin-bottom:1.15rem;font-size:.82rem}
   .hero .btn-row{
