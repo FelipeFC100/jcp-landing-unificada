@@ -444,7 +444,14 @@ section[id]{scroll-margin-top:80px}
 
 /* ---------- 16. Recado e equipe ---------- */
 .recado{display:grid;gap:clamp(1.75rem,4vw,3rem);align-items:center}
-@media(min-width:920px){.recado{grid-template-columns:.8fr 1.2fr}}
+/* a foto acompanha a altura da carta. Com .8fr e proporcao fixa ela
+   sobrava e abria um buraco embaixo do texto. */
+@media(min-width:920px){
+  .recado{grid-template-columns:.66fr 1.34fr;align-items:stretch}
+  .recado>figure{display:flex}
+  .recado>figure .foto-slot{width:100%;aspect-ratio:auto;min-height:400px}
+  .recado>figure img{height:100%;object-fit:cover;object-position:top}
+}
 .carta{
   background:var(--navy-800);border:1px solid var(--navy-600);
   border-radius:var(--r-panel);padding:clamp(1.5rem,3.5vw,2.25rem);
