@@ -205,8 +205,6 @@ section[id]{scroll-margin-top:80px}
 .hero-figure picture{display:block}
 .hero-figure img{
   position:relative;width:100%;object-fit:cover;object-position:top center;
-  border-radius:20px;border:1px solid rgba(232,205,147,.22);
-  box-shadow:0 30px 60px -28px rgba(0,0,0,.9);
 }
 @media(min-width:900px){
   .hero-grid{grid-template-columns:1fr .88fr}
