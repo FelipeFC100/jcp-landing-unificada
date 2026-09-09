@@ -235,7 +235,6 @@ section[id]{scroll-margin-top:80px}
   letter-spacing:.16em;text-transform:uppercase;color:var(--gold-400);
 }
 .foto-slot span{font-size:.84rem;line-height:1.55;color:#8B96AB;max-width:30ch}
-.foto-slot--retrato{aspect-ratio:3/4}
 .foto-slot--larga{aspect-ratio:16/10}
 .foto-slot--claro{
   border-color:rgba(169,127,58,.35);
@@ -445,7 +444,7 @@ section[id]{scroll-margin-top:80px}
 .endereco p{font-size:1.02rem;line-height:1.6;color:var(--ink)}
 .onde-legenda{margin-top:.9rem;font-size:.92rem;line-height:1.55;color:var(--ink-muted);text-align:center}
 
-/* ---------- 16. Recado e equipe ---------- */
+/* ---------- 16. Recado ---------- */
 .recado{display:grid;gap:clamp(1.75rem,4vw,3rem);align-items:center}
 /* a foto acompanha a altura da carta. Com .8fr e proporcao fixa ela
    sobrava e abria um buraco embaixo do texto. */
@@ -475,27 +474,6 @@ section[id]{scroll-margin-top:80px}
   font-family:var(--font-hand);font-weight:700;font-size:2.1rem;line-height:.9;color:var(--gold-300);
 }
 .assinatura .cargo{font-size:.84rem;line-height:1.45;color:#7C879C}
-
-.equipe{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:clamp(2rem,4vw,3rem)}
-@media(min-width:640px){.equipe{grid-template-columns:repeat(2,1fr)}}
-/* cartao deitado: com duas advogadas, o empilhado deixava a foto pequena
-   no meio de um cartao largo demais */
-.membro{
-  display:flex;align-items:center;gap:1.25rem;
-  padding:1.25rem;border-radius:var(--r-panel);
-  background:var(--navy-800);border:1px solid var(--navy-600);
-}
-.membro .foto-slot{
-  flex:none;width:130px;margin-bottom:0;
-  padding:.7rem .45rem;aspect-ratio:3/4;max-height:none;
-}
-.membro-txt{min-width:0}
-.membro h4{font-size:1.08rem;color:var(--paper);margin-bottom:.3rem}
-.membro .oab{
-  display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--gold-400);margin-bottom:.6rem;
-}
-.membro p{font-size:.92rem;line-height:1.55;color:#AEB7C7}
 
 /* ---------- 17. FAQ ---------- */
 .faq{display:grid;gap:.65rem}
@@ -693,7 +671,7 @@ section[id]{scroll-margin-top:80px}
   .onde .btn-row .btn svg{width:15px;height:15px}
   .onde-legenda{font-size:.86rem}
 
-  /* ---- 16. Recado e equipe: cada advogado vira uma linha com foto ---- */
+  /* ---- 16. Recado ---- */
   .recado{gap:1.25rem}
   .recado>figure .foto-slot{max-width:56%;margin-inline:0;aspect-ratio:4/5}
   .recado>figure img{max-width:58%;aspect-ratio:4/5;object-fit:cover;object-position:top}
@@ -701,15 +679,6 @@ section[id]{scroll-margin-top:80px}
   .carta p{font-size:.97rem;line-height:1.68;margin-bottom:.8rem}
   .assinatura{margin-top:1.2rem;padding-top:1.1rem;gap:.75rem}
   .assinatura .nome{font-size:1.8rem}
-
-  .equipe{grid-template-columns:1fr;gap:.65rem;margin-top:1.6rem}
-  .membro{gap:.95rem;padding:.85rem}
-  .membro .foto-slot{width:88px;padding:.5rem .35rem}
-  .membro .foto-slot b{font-size:.58rem}
-  .membro .foto-slot span{font-size:.72rem}
-  .membro h4{font-size:1rem}
-  .membro .oab{margin-bottom:.25rem;font-size:.7rem}
-  .membro p{font-size:.86rem;line-height:1.45}
 
   /* ---- 17/18. FAQ e fechamento ---- */
   .faq summary{padding:.95rem 1.1rem;font-size:.98rem;gap:.7rem}
