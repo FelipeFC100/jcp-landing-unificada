@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Manrope:wght@400..800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <!-- o ?v= sobe a cada alteracao: sem ele o celular fica com o CSS velho em cache -->
-<link rel="stylesheet" href="assets/css/style.css?v=4">
+<link rel="stylesheet" href="assets/css/style.css?v=5">
 
 <script type="application/ld+json">
 {
@@ -101,13 +101,11 @@
     </div>
 
     <figure class="hero-figure">
-      <!-- FOTO 1 · Herói. Trocar por:
-           <picture><source srcset="assets/img/joao-hero.webp" type="image/webp">
-           <img src="assets/img/joao-hero.png" alt="..." width="900" height="1046" fetchpriority="high"></picture> -->
-      <div class="foto-slot foto-slot--heroi">
-        <b>Foto 1 · Herói</b>
-        <span>Dr. João, meio corpo, olhando pra câmera. Fundo removido (PNG). 1080×1600.</span>
-      </div>
+      <picture>
+        <source srcset="assets/img/joao-hero.webp" type="image/webp">
+        <img src="assets/img/joao-hero.jpg" width="900" height="1125" fetchpriority="high"
+             alt="Dr. João de Carvalho, advogado responsável pelo escritório">
+      </picture>
     </figure>
   </div>
 
@@ -707,11 +705,11 @@
 
     <div class="recado">
       <figure style="margin:0">
-        <!-- FOTO · Dr. João de corpo inteiro no escritório. -->
-        <div class="foto-slot foto-slot--retrato">
-          <b>Foto · Dr. João</b>
-          <span>Corpo inteiro no escritório. É a foto de confiança.</span>
-        </div>
+        <picture>
+          <source srcset="assets/img/joao-escritorio.webp" type="image/webp">
+          <img src="assets/img/joao-escritorio.jpg" width="900" height="1125" loading="lazy"
+               alt="Dr. João de Carvalho no escritório, na Cidade Estrutural">
+        </picture>
       </figure>
 
       <div class="carta">
@@ -890,6 +888,6 @@
   <svg aria-hidden="true"><use href="#i-wa"/></svg><span class="wa-bar__txt">Falar com advogado</span>
 </a>
 
-<script src="assets/js/main.js?v=4" defer></script>
+<script src="assets/js/main.js?v=5" defer></script>
 </body>
 </html>

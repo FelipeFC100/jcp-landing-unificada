@@ -203,7 +203,11 @@ section[id]{scroll-margin-top:80px}
   filter:blur(6px);
 }
 .hero-figure picture{display:block}
-.hero-figure img{position:relative;width:100%;object-fit:contain;object-position:bottom}
+.hero-figure img{
+  position:relative;width:100%;object-fit:cover;object-position:top center;
+  border-radius:20px;border:1px solid rgba(232,205,147,.22);
+  box-shadow:0 30px 60px -28px rgba(0,0,0,.9);
+}
 @media(min-width:900px){
   .hero-grid{grid-template-columns:1fr .88fr}
   .hero-figure{max-width:none}
@@ -450,7 +454,12 @@ section[id]{scroll-margin-top:80px}
   .recado{grid-template-columns:.66fr 1.34fr;align-items:stretch}
   .recado>figure{display:flex}
   .recado>figure .foto-slot{width:100%;aspect-ratio:auto;min-height:400px}
-  .recado>figure img{height:100%;object-fit:cover;object-position:top}
+  .recado>figure picture{display:flex;width:100%}
+  .recado>figure img{width:100%;height:100%;object-fit:cover;object-position:top}
+}
+.recado>figure img{
+  width:100%;border-radius:var(--r-panel);
+  border:1px solid rgba(232,205,147,.18);
 }
 .carta{
   background:var(--navy-800);border:1px solid var(--navy-600);
@@ -692,6 +701,7 @@ section[id]{scroll-margin-top:80px}
   /* ---- 16. Recado e equipe: cada advogado vira uma linha com foto ---- */
   .recado{gap:1.25rem}
   .recado>figure .foto-slot{max-width:56%;margin-inline:0;aspect-ratio:4/5}
+  .recado>figure img{max-width:58%;aspect-ratio:4/5;object-fit:cover;object-position:top}
   .carta{padding:1.3rem 1.2rem}
   .carta p{font-size:.97rem;line-height:1.68;margin-bottom:.8rem}
   .assinatura{margin-top:1.2rem;padding-top:1.1rem;gap:.75rem}
